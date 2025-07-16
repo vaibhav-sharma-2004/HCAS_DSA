@@ -9,7 +9,7 @@ int main(){
     for(int row=1;row<=n;row++)
     {
         char p='A';
-        for(int col=1;col<=2*(n-row+1);col++)
+        for(int col=1;col<=n-row+1;col++)
         {
   
             cout<<p<<" ";
