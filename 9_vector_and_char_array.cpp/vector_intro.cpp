@@ -7,7 +7,7 @@ int main(){
     //int n;
     //cin>>n;
 
-    vector<int> a;
+    //vector<int> a;
     //a.resize(n);
 
     // a.push_back(1);
@@ -33,16 +33,33 @@ int main(){
 
     int m=5;
 
-    vector<int> b(m); 
+    //vector<int> b(m); 
     //b.resize(m);
 
-    b.push_back(10);
-    int size=b.size();
-    for(int i=0;i<size;i++)
+    // b.push_back(10);
+    // int size=b.size();
+    // for(int i=0;i<size;i++)
+    // {
+    //     cout<<b[i]<<" ";
+    // }
+
+    vector<int> a(m);
+
+    for(int i=0;i<3;i++)
     {
-        cout<<b[i]<<" ";
+        a[i]=100;
     }
 
+    a.resize(3);
 
+    cout<<"size of vector:"<<a.size()<<endl;
+    cout<<"capacity of vector:"<<a.capacity()<<endl;
+
+    a[4]=10;
+
+    cout<<a[4]<<endl;
+
+    
+    cout<<a.size();
     return 0;
 }

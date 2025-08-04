@@ -1,4 +1,3 @@
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -11,10 +10,10 @@ int inverseNumber(int number){
 
         int digit=number%10;
 
-        int x=pos*pow(10,digit-1);
-        sum+=x;
-        
-        number=number/10;
+        int place = 1;
+        for (int i = 1; i < digit; i++) place *= 10;
+        sum += pos * place;
+        number /= 10;
         pos++;
     }
 
