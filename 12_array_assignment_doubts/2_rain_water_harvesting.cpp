@@ -49,15 +49,15 @@ int main(){
 
     //OPTIMIZED APPROACH
 
-    int leftMax[n];
+    //int leftMax[n];
     int rightMax[n];
 
-    leftMax[0]=arr[0];
+    //leftMax[0]=arr[0];
 
-    for(int i=1;i<n;i++)
-    {
-        leftMax[i]=max(arr[i],leftMax[i-1]);
-    }
+    // for(int i=1;i<n;i++)
+    // {
+    //     leftMax[i]=max(arr[i],leftMax[i-1]);
+    // }
 
     rightMax[n-1]=arr[n-1];
 
@@ -66,9 +66,12 @@ int main(){
         rightMax[i]=max(arr[i],rightMax[i+1]);
     }
 
+    int leftMax=arr[0];
+
     for(int roof=1;roof<n-1;roof++)
     {
-        int lmax=leftMax[roof-1];
+        leftMax=max(arr[roof-1],leftMax);
+        int lmax=leftMax;
         int rmax=rightMax[roof+1];
 
         int mini=min(lmax,rmax);
